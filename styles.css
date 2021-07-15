@@ -1,26 +1,30 @@
+:root{
+
+    --main-bg-color: rgb(127, 255, 144);
+    --calculator-bg-color: rgb(107, 105, 105);
+
+}
+
 *{
     font-size: 18pt;
 }
 
 body{
-    background-color: aquamarine;
+    background-color: var(--main-bg-color);
+
 }
 
 #calculator{
 
-    background-color: rgb(107, 105, 105);
+    background-color: var(--calculator-bg-color);
     height: 750px;
-    width: 600px;
-
+    width: 550px;
     margin: 50px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-
     border-radius: 25px;
     border: 2pt solid black;
-
-
 
 }
 
@@ -36,6 +40,8 @@ body{
     /* place-self: center stretch; */
     grid-column: span 2;
     background-color: rgb(219, 72, 72);
+    /* font-size: 70pt !important; */
+    
 }
 
 #delete{
@@ -63,16 +69,15 @@ body{
 
 }
 
-/* .operand{
+.operand{
 
-    font-size: 70pt !important;
-    background-color: red !important;
-} */
+    font-size: 24pt !important;
+}
 
 .button{
     background-color: rgb(212, 212, 212);
     border: 2pt solid black;
-    border-radius: 10px;
+    border-radius: 25px;
 
 }
 
