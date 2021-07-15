@@ -4,14 +4,14 @@ A simple calculator built with HTML, CSS, and JS.
 
 
 Tools:
-    VS Code
-    Git/Github
-    Linux terminal
+    VS Code, 
+    Git/Github, 
+    Linux terminal. 
 
 
 What I learned:
-    Gained familiarity with JS ES6
-    Improved my CSS Grid and Flexbox skills
+    Gained familiarity with JS ES6. 
+    Improved my CSS Grid and Flexbox skills. 
 
 
 
