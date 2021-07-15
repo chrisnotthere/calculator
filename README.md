@@ -16,6 +16,7 @@ What I learned: <br />
 
 
 TODO: <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;more testing!!, <br />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add keyboard support, <br />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get DELETE (backspace) button working, <br />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get decimal point button working, <br />
