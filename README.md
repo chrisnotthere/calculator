@@ -1,6 +1,8 @@
 # calculator
 
 A simple calculator built with HTML, CSS, and JS.
+This calculator only evaluates a single pair of numbers at a time.
+Operations: add, subtract, multiply, and divide.
 
 
 Tools: <br />
@@ -14,11 +16,7 @@ What I learned: <br />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Improved my CSS Grid and Flexbox skills. <br />
 
 
-
 TODO: <br />
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;more testing!!, <br />
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add keyboard support, <br />
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get DELETE (backspace) button working, <br />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get decimal point button working, <br />
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;refine UI.
-
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get DELETE (backspace) button working, <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add keyboard support. <br />
