@@ -1,11 +1,14 @@
+*{
+    font-size: 18pt;
+}
+
 :root{
     --main-bg-color: rgb(127, 255, 144);
     --calculator-bg-color: rgb(107, 105, 105);
-
-}
-
-*{
-    font-size: 18pt;
+    --clear-btn-color: rgb(219, 72, 72);
+    --delete-btn-color: rgb(135, 135, 216);
+    --num-btn-color: rgb(212, 212, 212);
+    --display-color: rgb(124, 207, 218);
 }
 
 body{
@@ -22,7 +25,7 @@ body{
     align-items: center;
     border-radius: 25px;
     border: 2pt solid black;
-
+    box-shadow: 10px 10px rgb(175, 175, 175);
 }
 
 #buttons{
@@ -30,30 +33,24 @@ body{
     grid-template-columns: 100px 100px 100px 100px ;
     grid-template-rows: 100px 100px 100px 100px 100px;
     gap: 10px 10px;
-
 }
 
 #clear{
-    /* place-self: center stretch; */
     grid-column: span 2;
-    background-color: rgb(219, 72, 72);
-    /* font-size: 70pt !important; */
-    
+    background-color: var(--clear-btn-color);
 }
 
 #delete{
-    /* place-self: center; */
     grid-column: span 2;
-    background-color: rgb(135, 135, 216);
-
+    background-color: var(--delete-btn-color);
 }
 
 #display{
     box-sizing: border-box;
-    background-color: rgb(124, 207, 218);
+    background-color: var(--display-color);
     height: 100px;
     width: 500px;
-    border-radius: 15px;
+    border-radius: 25px;
     margin: 30px;
     padding: 10px;
     text-align: right;
@@ -61,18 +58,16 @@ body{
     font-family: 'Courier New', Courier, monospace;
     font-size: 24pt;
     border: 2pt solid black
-
 }
 
-.operand{
+.operand, #equals{
     font-size: 24pt !important;
 }
 
 .button{
-    background-color: rgb(212, 212, 212);
+    background-color: var(--num-btn-color);
     border: 2pt solid black;
     border-radius: 25px;
-
 }
 
 .button:hover{
