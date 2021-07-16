@@ -1,7 +1,8 @@
 # calculator
+[View it live](https://chrisnotthere.github.io/calculator/) :point_left:
 
-A simple calculator built with HTML, CSS, and JS.
-This calculator only evaluates a single pair of numbers at a time.
+A simple calculator built with HTML, CSS, and JS. <br />
+This calculator only evaluates a single pair of numbers at a time. <br />
 Operations: add, subtract, multiply, and divide.
 
 
