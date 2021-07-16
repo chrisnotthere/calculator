@@ -6,6 +6,7 @@ const equalsBtn = document.querySelector('button[id="equals"]');
 
 let a = '';
 let b = '';
+let initialNumber = '';
 let total = 0;
 let currentNumber = 0;
 
@@ -21,9 +22,23 @@ let operatorSelected = null;
 //number buttons display number to screen
 numberBtn.forEach((button) => {
     button.addEventListener('click', (e) => {
-        display.innerText += e.target.innerText
+
+        if(!initialNumber){
+            //display.innerText = '';
+            //debugger;
+            console.log('initial number');
+            display.innerText = e.target.innerText
+            displayValue = display.innerText;
+            currentNumber = displayValue;
+            initialNumber = 1;
+            return;
+
+        }
+
+        display.innerText = currentNumber + e.target.innerText
         displayValue = display.innerText;
         currentNumber = displayValue;
+        initialNumber = 1;
 
         //console.log(displayValue);
 
@@ -33,21 +48,25 @@ numberBtn.forEach((button) => {
 
 //operand buttons 
 operatorBtn.forEach((button) => {
-    button.addEventListener('click', function firstClick(e) {
+    button.addEventListener('click', function operandClick(e) {
 
 
 
-        //first number for calculation is stored
+        //first number for calculation is stored if it doesnt already exist
         if (!a){
+
+            //set a to current display number
             a = parseInt(display.innerText);
             console.log('a is: ' + a);
-            display.innerText = '';
+            //display.innerText = '';
 
+            //console.log('storing a');
             //set operators Selected
             previousOperatorSelected = operatorSelected;
             operatorSelected = e.target.id;
             console.log('operator selected: ' + operatorSelected);
             console.log('previous operator selected: ' + previousOperatorSelected);
+            currentNumber = '';
 
             return;
         }
@@ -55,11 +74,11 @@ operatorBtn.forEach((button) => {
         //store second number
         b = parseInt(displayValue);
         console.log('b is: ' + b);
+        currentNumber += b;
 
+        //check if dividing by 0
         if(operatorSelected === 'divide' && b == 0){
-
             display.innerText = 'CANNOT DIVIDE BY 0!!!!';
-
             return;
 
         }
@@ -71,10 +90,13 @@ operatorBtn.forEach((button) => {
         console.log('previous operator selected: ' + previousOperatorSelected);
         
         total = operate(previousOperatorSelected, a, b);
+        display.innerText = total;
 
         console.log('total is: ' + total);
-        display.innerText = '';
+        //display.innerText = '';
+        //display.innerText = b;
 
+        currentNumber = '';
         a = total;
 
     })
@@ -85,18 +107,16 @@ operatorBtn.forEach((button) => {
 
 
 //equals brn
-//save last number user enters
-equalsBtn.addEventListener('click', function equals(e) {
+equalsBtn.addEventListener('click', function equalsClick(e) {
 
 
-
+    //save last number user enters
     b = parseInt(displayValue);
     console.log('b is: ' + b);
 
+    //check if dividing by zero
     if(operatorSelected === 'divide' && b == 0){
-
         display.innerText = 'CANNOT DIVIDE BY 0!!';
-
         return;
 
     }
@@ -120,6 +140,7 @@ clearBtn.addEventListener('click', () => {
 
     a = '';
     b = '';
+    initialNumber = '';
     total = 0;
     currentNumber = 0;
     displayValue = 0;

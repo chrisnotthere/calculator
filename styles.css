@@ -1,5 +1,4 @@
 :root{
-
     --main-bg-color: rgb(127, 255, 144);
     --calculator-bg-color: rgb(107, 105, 105);
 
@@ -11,11 +10,9 @@
 
 body{
     background-color: var(--main-bg-color);
-
 }
 
 #calculator{
-
     background-color: var(--calculator-bg-color);
     height: 750px;
     width: 550px;
@@ -61,16 +58,13 @@ body{
     padding: 10px;
     text-align: right;
     line-height: 80px;
-    
     font-family: 'Courier New', Courier, monospace;
     font-size: 24pt;
-
     border: 2pt solid black
 
 }
 
 .operand{
-
     font-size: 24pt !important;
 }
 
@@ -82,6 +76,5 @@ body{
 }
 
 .button:hover{
-
     opacity: 0.7;
 }
